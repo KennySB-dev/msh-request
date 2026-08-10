@@ -120,10 +120,7 @@
         button.addEventListener("click", async () => {
 
             // Make sure the Worker URL is configured.
-            if (
-                !WORKER_URL ||
-                WORKER_URL.includes("msh")
-            ) {
+            if (!WORKER_URL) {
                 status.className = "error";
                 status.textContent = "Worker URL is not configured.";
                 return;
